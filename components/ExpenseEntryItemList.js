@@ -7,7 +7,7 @@ export default class ExpenseEntryItemList extends React.Component {
     super(props);
   }
   render() {
-    const lists = this.props.items.map((item) => (
+    const lists = this.props.lists.map((item) => (
       <tr key={item.key}>
         <td>{item.name}</td>
         <td>{item.amount}</td>

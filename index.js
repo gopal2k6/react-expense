@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import App from './components/ExpenseEntryItemList';
+import ExpenseEntryItemList from './components/ExpenseEntryItemList';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);

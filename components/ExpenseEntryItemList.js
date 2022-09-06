@@ -1,12 +1,34 @@
-import * as React from 'react';
-import './style.css';
+import React from 'react';
+import ReactDom from 'react-dom';
+import '../style.css';
 
-export default class ExpenseEntryItemList extends React.Component() {
+export default class ExpenseEntryItemList extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    const lists = this.props.items.map((item) => (
+      <tr key={item.key}>
+        <td>{item.name}</td>
+        <td>{item.amount}</td>
+        <td>{item.spendDate}</td>
+        <td>{item.category}</td>
+      </tr>
+    ));
+
     return (
       <div>
-        <h1>Hello StackBlitz!</h1>
-        <p>Start editing to see some magic happen :)</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>{lists}</tbody>
+        </table>
       </div>
     );
   }
